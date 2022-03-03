@@ -1,0 +1,81 @@
+.outer-box {
+  width: 631px;
+  height: 454px;
+  border: 3px solid #ffa726;
+  margin: 45px auto;
+  padding: 10px 10px 10px 10px;
+}
+.middle-box {
+  width: 604px;
+  height: 429px;
+  border: 3px solid #f4e70f;
+}
+.inner-box {
+  margin: 10px;
+  height: 403px;
+  border: 3px solid #5a6aca;
+  padding: 20px;
+}
+.your-city {
+  text-align: center;
+  color: #ff3266;
+  border: 3px solid #ff3266;
+  background-color: #ffd8e1;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 10px;
+}
+
+.row {
+  color: #1ab2a8;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.current-temp {
+  margin: 0 auto;
+}
+
+.forecast {
+  color: #1ab2a8;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.temp {
+  font-size: 35px;
+}
+.emoji {
+  font-size: 25px;
+}
+.btn {
+  background-color: #d487e2;
+  color: #570964;
+  border-radius: 22px;
+  transition: all 200ms ease-in-out;
+  border: 1.5px solid #ab47bd;
+}
+.btn:hover {
+  color: white;
+  background-color: #ab47bd;
+}
+.currentButton {
+  background-color: #5a6aca;
+  color: white;
+  border-radius: 22px;
+  transition: all 200ms ease-in-out;
+  border: 1.5px solid #223185;
+  display: block;
+  margin: 0 auto;
+  margin-top: 4px;
+}
+.currentButton:hover {
+  color: #223185;
+  background-color: white;
+}
+.date-time {
+  text-align: center;
+  color: #1ab2a8;
+}
+
+.weather-icon {
+  color: rgba(243, 247, 9, 0.856);
+}
