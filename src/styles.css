@@ -11,31 +11,33 @@ li {
 }
 
 .outer-box {
-  width: 631px;
-  height: 454px;
+  width: 643px;
+  height: 494px;
   border: 3px solid #ffa726;
   margin: 45px auto;
   padding: 10px 10px 10px 10px;
 }
 .middle-box {
-  width: 604px;
-  height: 429px;
+  width: 616px;
+  height: 467px;
   border: 3px solid #f4e70f;
 }
 .inner-box {
   margin: 10px;
-  height: 403px;
+  height: 439px;
   border: 3px solid #5a6aca;
   padding: 5px;
+  background-color: azure;
 }
 .your-city {
   text-align: center;
+  font-size: 45px;
   color: #ff3266;
-  border: 3px solid #ff3266;
-  background-color: #ffd8e1;
-  border-radius: 10px;
 }
-
+.city-center {
+  position: relative;
+  top: 7px;
+}
 .row {
   color: #1ab2a8;
   text-align: center;
@@ -59,6 +61,7 @@ li {
 
 .forecast {
   color: #1ab2a8;
+  font-size: 20px;
 }
 
 .temp {
