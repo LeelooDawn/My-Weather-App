@@ -1,10 +1,15 @@
-a {
-  display: block;
-  color: #ff3266;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+ul {
+  margin: 0;
+  padding: 0;
 }
 li {
   list-style: none;
+  text-align: right;
 }
+
 .outer-box {
   width: 631px;
   height: 454px;
@@ -21,30 +26,39 @@ li {
   margin: 10px;
   height: 403px;
   border: 3px solid #5a6aca;
-  padding: 20px;
+  padding: 5px;
 }
 .your-city {
   text-align: center;
   color: #ff3266;
   border: 3px solid #ff3266;
   background-color: #ffd8e1;
-  font-family: Arial, Helvetica, sans-serif;
   border-radius: 10px;
 }
 
 .row {
   color: #1ab2a8;
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
 }
-
-.current-temp {
-  margin: 0 auto;
+.current-temp .weather-icon {
+  font-size: 50px;
+}
+.current-temp strong {
+  color: #ff3266;
+  font-size: 50px;
+  font-weight: 400;
+}
+.current-temp .units {
+  position: relative;
+  font-size: 14px;
+  top: -34px;
+}
+.current-temp a {
+  text-decoration: none;
 }
 
 .forecast {
   color: #1ab2a8;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .temp {
