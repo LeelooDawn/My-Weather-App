@@ -8,6 +8,8 @@ ul {
 li {
   list-style: none;
   text-align: right;
+}
+li:first-letter {
   text-transform: capitalize;
 }
 
