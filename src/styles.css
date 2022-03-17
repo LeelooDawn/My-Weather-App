@@ -2,6 +2,9 @@ a {
   display: block;
   color: #ff3266;
 }
+li {
+  list-style: none;
+}
 .outer-box {
   width: 631px;
   height: 454px;
