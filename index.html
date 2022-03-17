@@ -32,14 +32,18 @@
               </div>
               <div class="col-md-6">
                 <ul>
-                  <li class="current-temp text-center" id="temperature">
+                  <li class="current-temp text-center">
                     <i class="fas fa-cloud-sun weather-icon"></i
-                    ><strong>76</strong
+                    ><strong id="temperature">75</strong
                     ><span class="units">°F |<a href="#">°C</a></span>
                   </li>
-                  <li class="text-center">Precipitation: 0%</li>
-                  <li class="text-center">Wind: mph</li>
-                  <li class="text-center">clear</li>
+                  <li class="text-center">
+                    Humidity: <span id="humidity"></span>%
+                  </li>
+                  <li class="text-center">
+                    Wind: <span id="windSpeed"></span> mph
+                  </li>
+                  <li class="text-center" id="description"></li>
                 </ul>
               </div>
             </div>

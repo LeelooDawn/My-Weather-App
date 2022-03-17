@@ -8,19 +8,22 @@ ul {
 li {
   list-style: none;
   text-align: right;
+  text-transform: capitalize;
 }
 
 .outer-box {
   width: 643px;
   height: 494px;
   border: 3px solid #ffa726;
+  background-color: #f5c885;
   margin: 45px auto;
   padding: 10px 10px 10px 10px;
 }
 .middle-box {
   width: 616px;
   height: 467px;
-  border: 3px solid #f4e70f;
+  border: 3px solid #dbd109;
+  background-color: #f5f1a8;
 }
 .inner-box {
   margin: 10px;
