@@ -32,7 +32,7 @@ li:first-letter {
   height: 439px;
   border: 3px solid #5a6aca;
   padding: 5px;
-  background-color: azure;
+  background-color: white;
 }
 .your-city {
   text-align: center;
@@ -68,13 +68,10 @@ li:first-letter {
   color: #1ab2a8;
   font-size: 20px;
 }
-
 .temp {
   font-size: 35px;
 }
-.emoji {
-  font-size: 25px;
-}
+
 .btn {
   background-color: #d487e2;
   color: #570964;
@@ -105,6 +102,7 @@ li:first-letter {
   color: #1ab2a8;
 }
 
-.weather-icon {
-  color: rgba(243, 247, 9, 0.856);
+img.animated-gif {
+  height: auto;
+  width: 45px;
 }
