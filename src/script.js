@@ -84,3 +84,5 @@ function getCurrentPosition(event) {
 
 let currentLocation = document.querySelector("#currentLocation");
 currentLocation.addEventListener("click", getCurrentPosition);
+
+getTemperature("Chicago");
