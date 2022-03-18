@@ -14,22 +14,22 @@ li:first-letter {
 }
 
 .outer-box {
-  width: 643px;
-  height: 494px;
+  width: 679px;
+  height: 528px;
   border: 3px solid #ffa726;
   background-color: #f5c885;
   margin: 45px auto;
   padding: 10px 10px 10px 10px;
 }
 .middle-box {
-  width: 616px;
-  height: 467px;
+  width: 651px;
+  height: 501px;
   border: 3px solid #dbd109;
   background-color: #f5f1a8;
 }
 .inner-box {
   margin: 10px;
-  height: 439px;
+  height: 474px;
   border: 3px solid #5a6aca;
   padding: 5px;
   background-color: white;

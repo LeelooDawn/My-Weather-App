@@ -68,10 +68,8 @@ function displayTemperature(response) {
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
-  iconElement.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/10d@2x.png`
-  );
+  iconElement.setAttribute("src", `imgs/${response.data.weather[0].icon}.gif`);
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 function getCurrentPosition(event) {
   event.preventDefault();
