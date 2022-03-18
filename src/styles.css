@@ -47,9 +47,7 @@ li:first-letter {
   color: #1ab2a8;
   text-align: center;
 }
-.current-temp .weather-icon {
-  font-size: 50px;
-}
+
 .current-temp strong {
   color: #ff3266;
   font-size: 50px;
@@ -62,6 +60,7 @@ li:first-letter {
 }
 .current-temp a {
   text-decoration: none;
+  color: #fd6c90;
 }
 
 .forecast {
@@ -105,4 +104,8 @@ li:first-letter {
 img.animated-gif {
   height: auto;
   width: 45px;
+}
+.weather-icon {
+  height: 100px;
+  width: 100px;
 }
