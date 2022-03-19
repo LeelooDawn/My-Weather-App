@@ -62,7 +62,10 @@ li:first-letter {
   text-decoration: none;
   color: #fd6c90;
 }
-
+.current-temp .active {
+  color: #1ab2a8;
+  cursor: default;
+}
 .forecast {
   color: #1ab2a8;
   font-size: 20px;
