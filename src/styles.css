@@ -16,8 +16,8 @@ li:first-letter {
 .outer-box {
   width: 679px;
   height: 528px;
-  border: 3px solid #ffa726;
-  background-color: #f5c885;
+  border: 3px solid #ff3266;
+  background-color: #fd6c90;
   margin: 45px auto;
   padding: 10px 10px 10px 10px;
 }
@@ -36,12 +36,12 @@ li:first-letter {
 }
 .your-city {
   text-align: center;
-  font-size: 45px;
+  font-size: 63px;
   color: #ff3266;
 }
 .city-center {
   position: relative;
-  top: 7px;
+  top: 8px;
 }
 .row {
   color: #1ab2a8;
