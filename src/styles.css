@@ -70,8 +70,11 @@ li:first-letter {
   color: #1ab2a8;
   font-size: 20px;
 }
-.temp {
+.forecast-temp {
   font-size: 35px;
+}
+.descriptors {
+  line-height: 1.75px;
 }
 
 .btn {
