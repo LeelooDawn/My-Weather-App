@@ -70,7 +70,9 @@ li:first-letter {
   color: #1ab2a8;
   cursor: default;
 }
+
 .forecast {
+  margin-top: 16px;
   color: #1ab2a8;
   font-size: 20px;
 }
@@ -78,7 +80,7 @@ li:first-letter {
   font-size: 35px;
 }
 .descriptors {
-  line-height: 1.75px;
+  line-height: 18px;
 }
 
 .btn {
