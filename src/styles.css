@@ -12,13 +12,14 @@ li {
 li:first-letter {
   text-transform: capitalize;
 }
-
-.outer-box {
+.weather-app-wrapper {
   width: 679px;
+  margin: 45px auto;
+}
+.outer-box {
   height: 528px;
   border: 3px solid #ff3266;
   background-color: #fd6c90;
-  margin: 45px auto;
   padding: 10px 10px 10px 10px;
   border-radius: 20px;
 }
@@ -44,7 +45,7 @@ li:first-letter {
 }
 .city-center {
   position: relative;
-  top: 8px;
+  top: 30px;
 }
 .row {
   color: #1ab2a8;

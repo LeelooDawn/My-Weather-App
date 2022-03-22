@@ -16,73 +16,87 @@
   </head>
   <body>
     <div class="container">
-      <div class="outer-box">
-        <div class="middle-box">
-          <div class="inner-box">
-            <div class="row d-flex justify-content-center">
-              <div class="col-md-6 city-center">
-                <ul>
-                  <li class="your-city" id="search-city"></li>
-                  <li class="text-center">Time to go Sunbathing!</li>
-                </ul>
+      <div class="weather-app-wrapper">
+        <div class="outer-box">
+          <div class="middle-box">
+            <div class="inner-box">
+              <div class="row d-flex justify-content-center">
+                <div class="col-md-6 city-center">
+                  <ul>
+                    <li class="your-city" id="search-city"></li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <ul>
+                    <li class="current-temp text-center">
+                      <img
+                        src="imgs/01d.gif"
+                        alt="clear"
+                        id="weather-icon"
+                        class="weather-icon"
+                      />
+                      <strong id="temperature"></strong
+                      ><span class="units">°F</span>
+                    </li>
+                    <li class="text-center">
+                      <small> Humidity: <span id="humidity"></span>% </small>
+                    </li>
+                    <li class="text-center">
+                      <small> Wind: <span id="windSpeed"></span> mph</small>
+                    </li>
+                    <li class="text-center" id="description">
+                      <small>Clear</small>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div class="col-md-6">
-                <ul>
-                  <li class="current-temp text-center">
-                    <img
-                      src="imgs/01d.gif"
-                      alt="clear"
-                      id="weather-icon"
-                      class="weather-icon"
-                    />
-                    <strong id="temperature"></strong
-                    ><span class="units">°F</span>
-                  </li>
-                  <li class="text-center">
-                    <small> Humidity: <span id="humidity"></span>% </small>
-                  </li>
-                  <li class="text-center">
-                    <small> Wind: <span id="windSpeed"></span> mph</small>
-                  </li>
-                  <li class="text-center" id="description">
-                    <small>Clear</small>
-                  </li>
-                </ul>
+              <div>
+                <div class="col forecast">
+                  <p>Here is your 5 day forecast:</p>
+                </div>
               </div>
-            </div>
-            <div>
-              <div class="col forecast">
-                <p>Here is your 5 day forecast:</p>
-              </div>
-            </div>
-            <div class="weather-forecast" id="forecast"></div>
-            <br />
-            <div class="container-fluid">
-              <form class="d-flex" id="weather-search">
-                <input
-                  class="form-control me-2"
-                  type="search"
-                  placeholder="Enter Your City Here or-"
-                  aria-label="Search"
-                  id="weather-input"
-                />
-                <button class="btn btn-outline-*" type="submit">Search</button>
-              </form>
-              <button class="currentButton" id="currentLocation">
-                Use My Current Location
-              </button>
-              <div class="date-time" id="date-time">
-                <p></p>
+              <div class="weather-forecast" id="forecast"></div>
+              <br />
+              <div class="container-fluid">
+                <form class="d-flex" id="weather-search">
+                  <input
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="Enter Your City Here or-"
+                    aria-label="Search"
+                    id="weather-input"
+                  />
+                  <button class="btn btn-outline-*" type="submit">
+                    Search
+                  </button>
+                </form>
+                <button class="currentButton" id="currentLocation">
+                  Use My Current Location
+                </button>
+                <div class="date-time" id="date-time">
+                  <p></p>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
+        <small
+          ><a
+            href="https://github.com/LeelooDawn/My-Weather-App"
+            target="_blank"
+            >Open-Source Code</a
+          >
+          by Leslie Nesbit
+        </small>
+        <div>
+          <small>
+            <a href="https://www.flaticon.com/animated-icons" target="_blank"
+              >Animated icons created by Freepik - Flaticon</a
+            ></small
+          >
+        </div>
       </div>
-    </div>
-    <div>
-      <a href="https://github.com/LeelooDawn/My-Weather-App"
-        >Link to Github Information</a
-      >
     </div>
     <script src="src/script.js"></script>
   </body>
