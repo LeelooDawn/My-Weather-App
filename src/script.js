@@ -40,6 +40,21 @@ let now = new Date();
 let currentTime = document.querySelector("#date-time");
 currentTime.innerHTML = formatDate(now);
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  return days[day];
+}
+
 function submitCity(event) {
   event.preventDefault();
   let cityInput = document.querySelector("#weather-input");
@@ -51,6 +66,11 @@ function submitCity(event) {
 function getTemperature(citySubmitted) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${citySubmitted}&units=imperial&appid=ff39e85e3d2df1fdfa77a8da0f6b888f`;
   axios.get(apiUrl).then(displayTemperature);
+}
+function getForecast(coordinates) {
+  let apiKey = "ff39e85e3d2df1fdfa77a8da0f6b888f";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function displayTemperature(response) {
@@ -68,7 +88,9 @@ function displayTemperature(response) {
   windElement.innerHTML = Math.round(response.data.wind.speed);
   iconElement.setAttribute("src", `imgs/${response.data.weather[0].icon}.gif`);
   iconElement.setAttribute("alt", response.data.weather[0].description);
+  getForecast(response.data.coord);
 }
+
 function getCurrentPosition(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition((position) => {
@@ -96,18 +118,24 @@ function displayFahrenheitTemperature(event) {
   celciusLink.classList.remove("active");
 }
 
-function displayForecast() {
+function displayForecast(response) {
+  let dailyForecast = response.data.daily;
   forecastElement = document.querySelector("#forecast");
-  let days = ["Thursday", "Friday", "Saturday", "Sunday", "Monday"];
   let forecastHTML = `<div class="row">`;
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col">
-                <img class="animated-gif" src="imgs/01d.gif" alt="clear" />
-                <div class="forecast-temp">43</div>
-                <div class="forecast-day">${day}</div>
+  dailyForecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="col">
+                <img class="animated-gif" src="imgs/${
+                  forecastDay.weather[0].icon
+                }.gif" alt="clear" />
+                <div class="forecast-temp">${Math.round(
+                  forecastDay.temp.max
+                )}</div>
+                <div class="forecast-day">${formatDay(forecastDay.dt)}</div>
               </div>`;
+    }
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
@@ -128,4 +156,3 @@ let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 getTemperature("Chicago");
-displayForecast();
