@@ -1,13 +1,11 @@
 function formatDate(date) {
   let dateNumber = date.getDate();
   let hours = date.getHours();
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
   let minutes = date.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
+  let ampm = hours >= 12 ? `pm` : `am`;
+  hours = hours % 12;
+  hours = hours ? hours : 12;
+  minutes = minutes < 10 ? `0` + minutes : minutes;
   let days = [
     "Sunday",
     "Monday",
@@ -34,7 +32,7 @@ function formatDate(date) {
     "December",
   ];
   let month = months[date.getMonth()];
-  return `${day}, ${month} ${dateNumber}, ${hours}:${minutes}`;
+  return `In New Mexico, it is ${day}, ${month} ${dateNumber} ${hours}:${minutes} ${ampm}`;
 }
 let now = new Date();
 let currentTime = document.querySelector("#date-time");
@@ -101,22 +99,6 @@ function getCurrentPosition(event) {
     axios.get(apiUrl).then(displayTemperature);
   });
 }
-function displayCelciusTemperature(event) {
-  event.preventDefault();
-  let celciusTemperature = ((fahrenheitTemperature - 32) * 5) / 9;
-  let temperatureElement = document.querySelector("#temperature");
-  fahrenheitLink.classList.remove("active");
-  celciusLink.classList.add("active");
-  temperatureElement.innerHTML = Math.round(celciusTemperature);
-}
-
-function displayFahrenheitTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-  fahrenheitLink.classList.add("active");
-  celciusLink.classList.remove("active");
-}
 
 function displayForecast(response) {
   let dailyForecast = response.data.daily;
@@ -144,15 +126,7 @@ function displayForecast(response) {
 let citySubmitted = document.querySelector("#weather-search");
 citySubmitted.addEventListener("submit", submitCity);
 
-let fahrenheitTemperature = null;
-
 let currentLocation = document.querySelector("#currentLocation");
 currentLocation.addEventListener("click", getCurrentPosition);
-
-let celciusLink = document.querySelector("#celcius-link");
-celciusLink.addEventListener("click", displayCelciusTemperature);
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 getTemperature("Chicago");
