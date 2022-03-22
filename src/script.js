@@ -103,7 +103,7 @@ function displayForecast() {
   days.forEach(function (day) {
     forecastHTML =
       forecastHTML +
-      `<div class="col-2">
+      `<div class="col">
                 <img class="animated-gif" src="imgs/01d.gif" alt="clear" />
                 <div class="forecast-temp">43</div>
                 <div class="forecast-day">${day}</div>
