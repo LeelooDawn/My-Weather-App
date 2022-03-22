@@ -96,6 +96,23 @@ function displayFahrenheitTemperature(event) {
   celciusLink.classList.remove("active");
 }
 
+function displayForecast() {
+  forecastElement = document.querySelector("#forecast");
+  let days = ["Thursday", "Friday", "Saturday", "Sunday", "Monday"];
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+                <img class="animated-gif" src="imgs/01d.gif" alt="clear" />
+                <div class="forecast-temp">43</div>
+                <div class="forecast-day">${day}</div>
+              </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 let citySubmitted = document.querySelector("#weather-search");
 citySubmitted.addEventListener("submit", submitCity);
 
@@ -111,3 +128,4 @@ let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 getTemperature("Chicago");
+displayForecast();
