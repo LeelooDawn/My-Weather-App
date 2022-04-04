@@ -129,4 +129,4 @@ citySubmitted.addEventListener("submit", submitCity);
 let currentLocation = document.querySelector("#currentLocation");
 currentLocation.addEventListener("click", getCurrentPosition);
 
-getTemperature("Chicago");
+getTemperature("Bernalillo");
