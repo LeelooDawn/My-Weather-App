@@ -32,7 +32,7 @@ function formatDate(date) {
     "December",
   ];
   let month = months[date.getMonth()];
-  return `In New Mexico, it is ${day}, ${month} ${dateNumber} ${hours}:${minutes} ${ampm}`;
+  return `It is ${day}, ${month} ${dateNumber} ${hours}:${minutes} ${ampm}`;
 }
 let now = new Date();
 let currentTime = document.querySelector("#date-time");
